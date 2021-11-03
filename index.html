@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+<div class="content">
+  <header>
+    <p>calc</p>
+
+    <div class="theme">
+      <label for="theme">THEME</label>
+      <input type="range" id="theme" name="theme" min="1" max="3" >
+      
+    </div>
+  </header>
+
+  <section class="screen">
+    <span class="sign">+</span>
+
+    <p class="value">4556</p>
+  </section>
+
+  <section class="buttons">
+    <div class="btns btn-digit">7</div>
+    <div class="btns btn-digit">8</div>
+    <div class="btns btn-digit">9</div>
+    <div class="btns btn-del btn-fn">DEL</div>
+    <div class="btns btn-digit">4</div>
+    <div class="btns btn-digit">5</div>
+    <div class="btns btn-digit">6</div>
+    <div class="btns btn-operation">+</div>
+    <div class="btns btn-digit">1</div>
+    <div class="btns btn-digit">2</div>
+    <div class="btns btn-digit">3</div>
+    <div class="btns btn-operation">-</div>
+    <div class="btns btn-digit">.</div>
+    <div class="btns btn-digit">0</div>
+    <div class="btns btn-operation">/</div>
+    <div class="btns btn-operation">x</div>
+    <div class="btns btn-reset btn-fn">RESET</div>
+    <div class="btns btn-equals">=</div>
+  </section>
+
+</div>
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap");
+
+:root {
+  --main-bg: hsl(222, 26%, 31%);
+  --keypad-bg: hsl(223, 31%, 20%);
+  --screen-bg: hsl(224, 36%, 15%);
+  --fn-key-bg: hsl(225, 21%, 49%);
+  --fn-key-shadow: hsl(224, 28%, 35%);
+  --equals-key-bg: hsl(6, 63%, 50%);
+  --equals-key-shadow: hsl(6, 70%, 34%);
+  --key-bg: hsl(30, 25%, 89%);
+  --key-shadow: hsl(28, 16%, 65%);
+  --key-color: hsl(221, 14%, 31%);
+  --fn-key-color: hsl(0, 0, 100%);
+  --equals-key-color: hsl(0, 0, 100%);
+  --text-color: hsl(0, 0, 100%);
+}
+
+* {
+  box-sizing: border-box;
+  transition: all ease-in-out 100ms;
+}
+
+p {
+  margin: 0;
+  color: var(--text-color);
+}
+
+span {
+  color: var(--text-color);
+}
+
+html {
+  font-size: 32px;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Spartan", sans-serif;
+  background-color: var(--main-bg);
+  color: #fff;
+  margin: 0;
+}
+
+.content {
+  margin: 3% auto;
+  width: min(90%, 15rem);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--main-bg);
+}
+
+label {
+  color: var(--text-color);
+  font-size: 0.5rem;
+}
+
+.theme {
+  display: flex;
+  align-items: center;
+  background-color: var(--main-bg);
+}
+
+input {
+  width: 1.5rem;
+  margin-left: 0.5rem;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 20px;
+  background: var(--keypad-bg);
+  border: none;
+  border-radius: 10px;
+  padding: 0 3px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: none;
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+  background: var(--equals-key-bg);
+  margin-top: 3px;
+}
+
+.screen {
+  background-color: var(--screen-bg);
+  width: 100%;
+  height: 70px;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.25rem;
+  border-radius: 10px;
+}
+
+.buttons {
+  background-color: var(--keypad-bg);
+  padding: 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
+  border-radius: 10px;
+}
+
+.btns {
+  background-color: var(--key-bg);
+  color: var(--key-color);
+  margin: 8%;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 0.3rem;
+  border-radius: 10px;
+  border-bottom: solid 5px var(--key-shadow);
+  cursor: pointer;
+}
+
+.btn-fn {
+  background-color: var(--fn-key-bg);
+  color: var(--fn-key-color);
+  border-bottom: solid 5px var(--fn-key-shadow);
+  font-size: 0.7rem;
+}
+
+.btn-reset {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  margin: 4%;
+}
+
+.btn-equals {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  margin: 4%;
+  background-color: var(--equals-key-bg);
+  color: var(--equals-key-color);
+  border-bottom: solid 5px var(--equals-key-shadow);
+}
